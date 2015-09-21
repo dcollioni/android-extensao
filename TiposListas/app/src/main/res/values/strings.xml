@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">TiposListas</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="banana">Banana</string>
+    <string name="maca">Maça</string>
+    <string name="uva">Uva</string>
+    <string name="amora">Amora</string>
+    <string name="kiwi">Kiwi</string>
+    <string name="morango">Morango</string>
+
+    <string-array name="frutas">
+        <item>@string/banana</item>
+        <item>@string/maca</item>
+        <item>@string/uva</item>
+        <item>@string/amora</item>
+        <item>@string/kiwi</item>
+        <item>@string/morango</item>
+    </string-array>
+
+    <string name="none_simple">None - Simples</string>
+    <string name="single_radio">Single - Radio</string>
+    <string name="single_activated">Single - Activated</string>
+    <string name="multiple_activated">Multiple - Activated</string>
+    <string name="multiple_checkbox">Multiple - CheckBox</string>
+    <string name="multiple_checked">Multiple - Checked</string>
+
+    <string-array name="tipos_lista">
+        <item>@string/none_simple</item>
+        <item>@string/single_radio</item>
+        <item>@string/single_activated</item>
+        <item>@string/multiple_activated</item>
+        <item>@string/multiple_checkbox</item>
+        <item>@string/multiple_checked</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Lista Tarefas</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="tarefa">Tarefa</string>
+    <string name="incluir">Incluir</string>
+    <string name="informe_descricao">Informe a descrição da tarefa</string>
+    <string name="limpar_lista">Limpar lista</string>
+    <string name="excluir_tarefa">Excluir Tarefa</string>
+    <string name="confirma_exclusao_tarefa">Confirma exclusão da tarefa?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+</resources>

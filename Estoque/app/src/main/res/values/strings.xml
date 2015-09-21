@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Estoque</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="usuario_senha_invalidos">Usuário e senhas inválidos</string>
+    <string name="title_activity_categoria">Categorias</string>
+
+    <string name="eletronicos">Eletrõnicos</string>
+    <string name="escolar">Escolar</string>
+    <string name="perfumaria">Perfumaria</string>
+
+    <string-array name="categorias">
+        <item>@string/eletronicos</item>
+        <item>@string/escolar</item>
+        <item>@string/perfumaria</item>
+    </string-array>
+
+    <string name="title_activity_produto">Produtos</string>
+    <string name="title_activity_detalhe">Detalhe</string>
+
+</resources>

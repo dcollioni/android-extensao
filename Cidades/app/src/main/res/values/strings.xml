@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Cidades</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="rs">RS - Rio Grande do Sul</string>
+    <string name="sc">SC - Santa Catarina</string>
+    <string name="pr">PR - Paraná</string>
+
+    <string-array name="estados">
+        <item>@string/pr</item>
+        <item>@string/rs</item>
+        <item>@string/sc</item>
+    </string-array>
+
+</resources>

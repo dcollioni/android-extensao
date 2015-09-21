@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Despesas</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menuNovo">Novo</string>
+    <string name="Limpar">Limpar</string>
+    <string name="excluir_despesas">Exclui Despesas</string>
+    <string name="cofirma_exclusao">Confirma exclusão?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+</resources>
