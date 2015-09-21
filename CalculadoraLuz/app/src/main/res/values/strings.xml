@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculadora Luz</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="kwh">Kwh</string>
+    <string name="residencial">Residencial</string>
+    <string name="comercial">Comercial</string>
+    <string name="rural">Rural</string>
+    <string name="calcular">Calcular</string>
+    <string name="incide_icms">Incide ICMS</string>
+    <string name="taxa_icms">Taxa ICMS</string>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pedidos</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menos">Menos</string>
+    <string name="mais">Mais</string>
+    <string name="fechar_pedido">Fechar Pedido</string>
+    <string name="qtd">Qtd</string>
+    <string name="limpar">Limpar</string>
+    <string name="confirma_operacao">Confirma a operação?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+
+</resources>
