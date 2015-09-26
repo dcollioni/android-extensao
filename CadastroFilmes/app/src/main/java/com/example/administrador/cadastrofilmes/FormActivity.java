@@ -1,13 +1,16 @@
 package com.example.administrador.cadastrofilmes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.administrador.cadastrofilmes.data.Db4oConnection;
 import com.example.administrador.cadastrofilmes.data.FilmeDao;
@@ -16,6 +19,8 @@ public class FormActivity extends AppCompatActivity {
 
     Db4oConnection db4o;
     FilmeDao filmeDao;
+
+    private long filmeId;
 
     EditText etTitulo, etAno, etDuracao;
     Spinner spCategoria;
@@ -33,12 +38,48 @@ public class FormActivity extends AppCompatActivity {
         btSalvar = (Button)findViewById(R.id.bt_salvar);
 
         configurarBtSalvar();
+        configurarDb4o();
+
+        Intent i = getIntent();
+        filmeId = i.getLongExtra(MainActivity.PARAM_FILME_ID, 0);
+    }
+
+    private void configurarDb4o() {
+        String dir = getDir("data", 0) + "/";
+        db4o = new Db4oConnection(dir);
+        filmeDao = new FilmeDao(db4o);
     }
 
     private void configurarBtSalvar() {
         btSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String titulo = etTitulo.getText().toString();
+                String ano = etAno.getText().toString();
+                String duracao = etDuracao.getText().toString();
+                String categoria = spCategoria.getSelectedItem().toString();
+
+                if (titulo.isEmpty() || ano.isEmpty() || duracao.isEmpty()) {
+                    Toast.makeText(
+                            getBaseContext(), R.string.preencha_dados_filme, Toast.LENGTH_SHORT
+                    ).show();
+                    return;
+                }
+
+                Filme filme = new Filme();
+                filme.setTitulo(titulo);
+                filme.setAno(Integer.parseInt(ano));
+                filme.setDuracao(Integer.parseInt(duracao));
+                filme.setCategoria(categoria);
+
+                if (filmeId == 0) {
+                    filmeDao.inserir(filme);
+                }
+                else {
+                    filmeDao.atualizar(filme, filmeId);
+                }
+
+                finish();
             }
         });
     }
@@ -46,11 +87,28 @@ public class FormActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        db4o.open();
+
+        // atualização
+        if (filmeId > 0) {
+            setTitle(getString(R.string.editar_filme));
+
+            Filme filme = filmeDao.buscar(filmeId);
+
+            etTitulo.setText(filme.getTitulo());
+            etAno.setText(Integer.toString(filme.getAno()));
+            etDuracao.setText(Integer.toString(filme.getDuracao()));
+
+            int position = ((ArrayAdapter<String>)spCategoria.getAdapter())
+                                .getPosition(filme.getCategoria());
+            spCategoria.setSelection(position);
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        db4o.close();
     }
 
     @Override
@@ -69,6 +127,10 @@ public class FormActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_limpar) {
+            etTitulo.setText(null);
+            etAno.setText(null);
+            etDuracao.setText(null);
+            spCategoria.setSelection(0);
             return true;
         }
 

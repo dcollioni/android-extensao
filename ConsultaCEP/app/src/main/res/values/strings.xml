@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ConsultaCEP</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="cep">CEP</string>
+    <string name="buscar">Buscar</string>
+    <string name="cep_nao_encontrado">CEP não encontrado</string>
+    <string name="bairro">"Bairro: "</string>
+    <string name="cidade">"Cidade: "</string>
+    <string name="estado">"Estado: "</string>
+    <string name="limpar">Limpar</string>
+</resources>

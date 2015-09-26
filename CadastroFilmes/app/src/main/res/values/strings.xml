@@ -20,6 +20,14 @@
     <string name="cancelar">Cancelar</string>
     <string name="salvar">Salvar</string>
     <string name="limpar">Limpar</string>
+    <string name="editar_filme">Editar filme</string>
+    <string name="preencha_dados_filme">Preencha os dados do filme</string>
+    <string name="excluir_filmes">Excluir filmes</string>
+    <string name="confirma_exclusao">Confirma a exclusão?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="excluir_todos">Excluir todos</string>
+    <string name="pesquisar">Pesquisar</string>
 
     <string-array name="categorias">
         <item>@string/acao</item>

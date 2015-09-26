@@ -9,4 +9,10 @@
         app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_add"/>
 
+    <item
+        android:id="@+id/menu_excluir_todos_filmes"
+        android:title="@string/excluir_todos"
+        android:orderInCategory="200"
+        app:showAsAction="never"/>
+
 </menu>
